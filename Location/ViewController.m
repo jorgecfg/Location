@@ -40,7 +40,9 @@ CLLocation *currentLocation;
 /// Não Autorizado
 -(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
-    NSLog(@"Usuário Não Autorizou!");
+    if (status != 3) {
+        NSLog(@"Usuário Não Autorizou!");
+    }
 }
 
 /// Autorizado
